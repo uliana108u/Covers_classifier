@@ -2,4 +2,18 @@
 name = "covers-classifier"
 version = "0.1.0"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "torch>=2.4",
+    "torchaudio>=2.4",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scikit-learn>=1.4",
+    "tqdm>=4.66",
+    "jsonlines>=4.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+covers-prepare = "covers.prepare:main"
+covers-baseline = "covers.baseline_cpu:main"
+covers-evaluate = "covers.evaluate:main"
